@@ -154,7 +154,7 @@ export class Quickswap implements Uniswapish {
       amount.toString()
     );
     logger.info(
-      `Fetching pair data for ${baseToken.address}-${quoteToken.address}.`
+      `quickswap/estimateSellTrade: Fetching pair data for ${baseToken.address}-${quoteToken.address}.`
     );
     const pair: Pair = await Fetcher.fetchPairData(
       baseToken,
@@ -202,7 +202,7 @@ export class Quickswap implements Uniswapish {
       amount.toString()
     );
     logger.info(
-      `Fetching pair data for ${quoteToken.address}-${baseToken.address}.`
+      `quickswap/estimateBuyTrade: Fetching pair data for ${quoteToken.address}-${baseToken.address}.`
     );
     const pair: Pair = await Fetcher.fetchPairData(
       quoteToken,

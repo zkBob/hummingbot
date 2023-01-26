@@ -7,7 +7,7 @@ import {
   ContractTransaction,
 } from '@ethersproject/contracts';
 import { AlphaRouter } from '@uniswap/smart-order-router';
-import { Trade, SwapRouter } from '@uniswap/router-sdk';
+import { Protocol, Trade, SwapRouter } from '@uniswap/router-sdk';
 import { MethodParameters } from '@uniswap/v3-sdk';
 import {
   Token,
@@ -178,7 +178,7 @@ export class Uniswap implements Uniswapish {
       CurrencyAmount.fromRawAmount(baseToken, amount.toString());
 
     logger.info(
-      `Fetching trade data for ${baseToken.address}-${quoteToken.address}.`
+      `uniswap/estimateSellTrade: Fetching trade data for ${baseToken.address}-${quoteToken.address}.`
     );
 
     const route = await this._alphaRouter.route(
@@ -187,6 +187,7 @@ export class Uniswap implements Uniswapish {
       TradeType.EXACT_INPUT,
       undefined,
       {
+        protocols: [Protocol.V3],
         maxSwapsPerPath: this.maximumHops,
       }
     );
@@ -226,7 +227,7 @@ export class Uniswap implements Uniswapish {
     const nativeTokenAmount: CurrencyAmount<Token> =
       CurrencyAmount.fromRawAmount(baseToken, amount.toString());
     logger.info(
-      `Fetching pair data for ${quoteToken.address}-${baseToken.address}.`
+      `uniswap/estimateBuyTrade: Fetching pair data for ${quoteToken.address}-${baseToken.address}.`
     );
     const route = await this._alphaRouter.route(
       nativeTokenAmount,
@@ -234,6 +235,7 @@ export class Uniswap implements Uniswapish {
       TradeType.EXACT_OUTPUT,
       undefined,
       {
+        protocols: [Protocol.V3],
         maxSwapsPerPath: this.maximumHops,
       }
     );

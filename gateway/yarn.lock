@@ -11497,10 +11497,10 @@ quick-lru@^5.1.1:
   resolved "https://registry.yarnpkg.com/quick-lru/-/quick-lru-5.1.1.tgz#366493e6b3e42a3a6885e2e99d18f80fb7a8c932"
   integrity sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA==
 
-quickswap-sdk@^3.0.8:
-  version "3.0.9"
-  resolved "https://registry.yarnpkg.com/quickswap-sdk/-/quickswap-sdk-3.0.9.tgz#905af4ed4117396beabcc836a0171124975afe93"
-  integrity sha512-4Txvhb4xhrkNNbsxWGguUJsUlv2LP8NUGD7rpvrlOv8FXhtvataVBv/EFAr5QAh0PrxLOuOWeo7V7BhVlT61ww==
+quickswap-sdk@^3.0.14:
+  version "3.0.14"
+  resolved "https://registry.yarnpkg.com/quickswap-sdk/-/quickswap-sdk-3.0.14.tgz#820e26027c2a6d6fdd027d6bceeb2a7ab782cc06"
+  integrity sha512-/Hp1fo6iHjQOlCuinKNgY6YGNuLk0Brg+Ltg/rM+qjMFhdij54DIXJrerKbuB6dQ+7EMvyaT9DxyCwiE/d8GTg==
   dependencies:
     "@uniswap/v2-core" "^1.0.0"
     big.js "^5.2.2"
